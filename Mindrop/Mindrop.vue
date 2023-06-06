@@ -28,9 +28,10 @@ watch(showItems, () => {
 <template>
     <div class="mindrop relative" :class="props.containerClasses">
 
-        <div class="bg-black rounded px-2 py-3 text-white flex space-x-2">
+        <div class="bg-black rounded px-2 py-3 text-white flex space-x-2 hover:cursor-pointer"
+             @click="showItems=!showItems" :class="props.triggerClasses">
             <i class="material-icons">{{ buttonIcon }}</i>
-            <button @click="showItems=!showItems" :class="props.triggerClasses">{{ props.buttonName }}
+            <button>{{ props.buttonName }}
             </button>
         </div>
 

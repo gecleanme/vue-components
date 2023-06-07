@@ -5,7 +5,7 @@ import {ref, watch} from "vue";
 const showItems = ref(false)
 
 const props = defineProps({
-    containerClasses: String,
+    containerClasses: {type: String, default: ''},
     triggerClasses: {
         type: String,
         default: 'bg-black rounded px-2 py-3 text-white flex space-x-2 hover:cursor-pointer'
@@ -15,7 +15,8 @@ const props = defineProps({
         default: 'bg-black absolute mt-2 px-3 py-2 rounded-md shadow-lg text-white z-10'
     },
     buttonName: {type: String, default: 'Dropdown'},
-    buttonIcon: String
+    buttonIcon: String,
+    buttonAfterIcon: {type: String, default: 'expand_more'}
 })
 
 const closeFromOutside = (event) => {
@@ -38,6 +39,7 @@ watch(showItems, () => {
             <i class="material-icons">{{ buttonIcon }}</i>
             <button>{{ props.buttonName }}
             </button>
+            <i class="material-icons">{{ buttonAfterIcon }}</i>
         </div>
 
         <div v-show="showItems" class="list-wrapper-container"

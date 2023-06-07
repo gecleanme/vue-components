@@ -5,7 +5,7 @@ import {ref, watch} from "vue";
 const showItems = ref(false)
 
 const props = defineProps({
-    containerClasses: {type: String, default: ''},
+    containerClasses: String,
     triggerClasses: {
         type: String,
         default: 'bg-black rounded px-2 py-3 text-white flex space-x-2 hover:cursor-pointer'

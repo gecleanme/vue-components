@@ -1,6 +1,6 @@
 <template>
     <transition name="fade">
-        <div v-if="visible" class="flash-message" :class="type">
+        <div v-if="visible" class="binkr-flash-message" :class="type">
             {{ message }}
         </div>
     </transition>
@@ -35,7 +35,7 @@ watchEffect(() => {
 </script>
 
 <style scoped>
-.flash-message {
+.binkr-flash-message {
     @apply p-4 rounded mb-4 text-center fixed top-4 right-4 z-50;
 }
 
@@ -49,25 +49,24 @@ watchEffect(() => {
     @apply opacity-0;
 }
 
-.flash-message {
+.binkr-flash-message {
     @apply rounded-lg p-4;
 }
 
-.flash-message.info {
+.binkr-flash-message.info {
     @apply bg-blue-100 text-blue-700;
 }
 
-.flash-message.success {
+.binkr-flash-message.success {
     @apply bg-green-100 text-green-700;
 }
 
-.flash-message.warning {
+.binkr-flash-message.warning {
     @apply bg-yellow-100 text-yellow-700;
 }
 
-.flash-message.error {
+.binkr-flash-message.error {
     @apply bg-red-100 text-red-700;
 }
-
 
 </style>

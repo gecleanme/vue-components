@@ -8,11 +8,11 @@ const props = defineProps({
     containerClasses: {type: String, default: ''},
     triggerClasses: {
         type: String,
-        default: 'bg-black rounded px-2 py-3 text-white flex space-x-2 hover:cursor-pointer'
+        default: 'md-trigger'
     },
     listWrapperClasses: {
         type: String,
-        default: 'bg-black absolute mt-2 px-3 py-2 rounded-md shadow-lg text-white z-10'
+        default: 'md-list-wrapper'
     },
     buttonName: {type: String, default: 'Dropdown'},
     buttonIcon: String,
@@ -35,14 +35,14 @@ watch(showItems, () => {
 <template>
     <div class="mindrop relative root-container" :class="props.containerClasses">
 
-        <div class="trigger-container" @click="showItems=!showItems" :class="props.triggerClasses">
+        <div class="trigger-container md-trigger" @click="showItems=!showItems" :class="props.triggerClasses">
             <i class="material-icons">{{ buttonIcon }}</i>
             <button>{{ props.buttonName }}
             </button>
             <i class="material-icons">{{ buttonAfterIcon }}</i>
         </div>
 
-        <div v-show="showItems" class="list-wrapper-container"
+        <div v-show="showItems" class="list-wrapper-container md-list-wrapper"
              :class="props.listWrapperClasses">
             <slot/>
         </div>
@@ -52,5 +52,12 @@ watch(showItems, () => {
 
 <style scoped>
 
+.md-trigger {
+    @apply bg-black rounded px-2 py-3 text-white flex space-x-2 hover:cursor-pointer;
+}
+
+.md-list-wrapper{
+    @apply bg-black absolute mt-2 px-3 py-2 rounded-md shadow-lg text-white z-10;
+}
 
 </style>

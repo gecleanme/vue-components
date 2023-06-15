@@ -56,7 +56,7 @@ watch(showItems, () => {
     @apply bg-black rounded px-2 py-3 text-white flex space-x-2 hover:cursor-pointer;
 }
 
-.md-list-wrapper{
+.md-list-wrapper {
     @apply bg-black absolute mt-2 px-3 py-2 rounded-md shadow-lg text-white z-10;
 }
 

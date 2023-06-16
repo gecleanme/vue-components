@@ -2,8 +2,9 @@
  Custom made, with love
 
 ### Properties:
-- Vue 3: Composition API Base
-- Styled with Tailwind CSS 
+- Vue 3: Composition API Base, using ```script setup``` macro
+- Styled with Tailwind CSS
+- Minimalistic by design
 
 
 ## Dependencies
@@ -15,4 +16,8 @@
 
 ## Mindrop
 
-Minimalistic Dropdown Component
+Minimalistic "Context Menu" Component
+
+## Badgerr
+
+SVG Badges made easy

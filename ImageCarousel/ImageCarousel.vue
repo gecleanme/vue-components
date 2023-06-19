@@ -65,6 +65,12 @@ const props = defineProps({
     autoPlay: {
         type: Boolean,
         default: false
+    },
+    // key bindings can cause conflicts that degrade the user experience
+
+    keyBindings: {
+        type: Boolean,
+        default: false
     }
 })
 
@@ -90,18 +96,18 @@ const clearAutoPlay = () => {
 const imageClass = computed(() => `max-w-${props.width} max-h-${props.height} object-contain`)
 
 onMounted(() => {
-    // uncomment the next line if you want keyboard interactivity
-
-    // window.addEventListener('keydown', handleKeydown);
+    if (props.keyBindings) {
+        window.addEventListener('keydown', handleKeydown);
+    }
     if (props.autoPlay) {
         autoPlay();
     }
 })
 
 onUnmounted(() => {
-    // uncomment the next line if you want keyboard interactivity
-
-    // window.removeEventListener('keydown', handleKeydown);
+    if (props.keyBindings) {
+        window.removeEventListener('keydown', handleKeydown);
+    }
     if (props.autoPlay) {
         clearAutoPlay();
     }

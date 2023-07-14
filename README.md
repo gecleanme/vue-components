@@ -78,7 +78,7 @@ a minimalistic "Confirmation" Component
 ### Basic Usage (inspect component code for defaults/optional props):
 ```html
     <!--Trigger that shows the dialog by setting the "Open" state to true -->
-<button @click="showConfirmDialog" class="hidden">Click to Show</button>
+<button @click="showConfirmDialog">Click to Show</button>
 
     <!-- isOpen: ref flag that determines the "Open" state 
          handleConfirm: function that handle confirmation action

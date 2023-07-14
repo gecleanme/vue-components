@@ -103,7 +103,7 @@ Flexible "Breadcrumbs" Component
 
 ```html
     <!-- Breadcrumbs hashmap containing a "url" and a "label" is passed   -->
-    <Breadcrumbs :breadcrumbs="props.breadcrumbs"></Breadcrumbs>
+    <SlashTrail :breadcrumbs="props.breadcrumbs"></SlashTrail>
 
 ```
 

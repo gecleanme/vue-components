@@ -81,7 +81,7 @@ a minimalistic "Confirmation" Component
 <button @click="showConfirmDialog">Click to Show</button>
 
     <!-- isOpen: ref flag that determines the "Open" state 
-         handleConfirm: function that handle confirmation action
+         handleConfirm: confirmation logic
          handleClose: typically inverts the "Open" state
          
     -->

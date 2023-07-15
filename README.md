@@ -11,6 +11,7 @@
 - TailwindCSS
 
 ## Installation/Usage
+- Copy the component(s) into your project's "Components" dir
 - Import Component and use it as shown under the component's section
 - Some components have InertiaJS logic embedded in since they were originally designed to work with InertiaJS' Adapters,
 feel free to modify the logic to fit your use case. 
@@ -42,6 +43,19 @@ Minimalistic "Context Menu" Component
 ### Specific Dependencies:
 - Google Material icons (https://github.com/google/material-design-icons)
 
+### Instructions:
+Pass the icon name for the "buttonAfterIcon" & "buttonIcon" props, which set the icons for "before" & "after" areas in the context menu trigger
+
+Find the icon names at https://fonts.google.com/icons
+
+### Example:
+```html
+<!-- Under "Inserting the icon" section  -->
+<span class="material-symbols-outlined">
+expand_more <!-- grab this part and pass it -->
+</span>
+```
+
 
 
 ## Badgerr
@@ -62,14 +76,18 @@ Flexible Image Carousel Component
 ```html
     <!-- images array is supplied along with flags to activate keyboard bindings and carousel autoplay -->
 <ImageCarousel :images="imgs" class="mt-4" :auto-play="true" :key-bindings="true">
-    <template #prev> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-    </svg>
-</template>
-<template #next> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-    </svg>
-</template>
+    <template #prev>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+             class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+        </svg>
+    </template>
+    <template #next>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+             class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"/>
+        </svg>
+    </template>
 </ImageCarousel>
 ```
 
@@ -80,11 +98,11 @@ a minimalistic "Confirmation" Component
     <!--Trigger that shows the dialog by setting the "Open" state to true -->
 <button @click="showConfirmDialog">Click to Show</button>
 
-    <!-- isOpen: ref flag that determines the "Open" state 
-         handleConfirm: confirmation logic
-         handleClose: typically inverts the "Open" state
-         
-    -->
+<!-- isOpen: ref flag that determines the "Open" state 
+     handleConfirm: confirmation logic
+     handleClose: typically inverts the "Open" state
+     
+-->
 <SimplerConfirm
         :isOpen="isDialogOpen"
         title="Confirmation"
@@ -103,7 +121,7 @@ Flexible "Breadcrumbs" Component
 
 ```html
     <!-- Breadcrumbs hashmap containing a "url" and a "label" is passed   -->
-    <SlashTrail :breadcrumbs="props.breadcrumbs"></SlashTrail>
+<SlashTrail :breadcrumbs="props.breadcrumbs"></SlashTrail>
 
 ```
 
@@ -114,6 +132,6 @@ Minimalistic "Flash Message" component
 
 ```html
     <!-- a message type and text (message) is passed -->
-    <Blinkr type="success" message="Operation Succeeded"></Blinkr>
+<Blinkr type="success" message="Operation Succeeded"></Blinkr>
 
 ```

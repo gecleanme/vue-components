@@ -18,8 +18,8 @@ Custom made, with love
 ## Installation/Usage
 
 - Copy the component(s) into your project's "Components" dir
-- Import Component and use it as shown under the component's section
-- Some components have InertiaJS logic embedded in since they were originally designed to work with InertiaJS' Adapters,
+- Import the Component source file and use it as shown under the component's section
+- Some components have InertiaJS logic embedded since they were initially designed to work with InertiaJS Adapters,
   feel free to modify the logic to fit your use case.
 
 ## Contribution Guidelines

@@ -8,6 +8,9 @@ Custom made, with love
 - Styled with TailwindCSS
 - Minimalistic by design
 
+## Code Formatting/Style Treatment
+[Prettier](https://prettier.io/)
+
 ## General Dependencies
 
 - TailwindCSS
